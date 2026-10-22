@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hawkeye Admin</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">🦅</div>
+
+                <div>
+                    <h1>HAWKEYE</h1>
+                    <span>SAFETY NETWORK</span>
+                </div>
+            </div>
+
+            <nav>
+
+                <a class="nav-item active">
+                    <span>⌂</span>
+                    Dashboard
+                </a>
+
+                <a class="nav-item">
+                    <span>♙</span>
+                    Tourists
+                </a>
+
+                <a class="nav-item">
+                    <span>⌁</span>
+                    Nodes
+                </a>
+
+                <a class="nav-item">
+                    <span>⚠</span>
+                    Alerts
+                </a>
+
+            </nav>
+
+            <div class="server-status">
+
+                <div class="status-dot"></div>
+
+                <div>
+                    <strong>SERVER ONLINE</strong>
+                    <small>Local Network</small>
+                </div>
+
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <header class="topbar">
+
+                <div>
+                    <h2>Command Center</h2>
+                    <p>Real-time Hawkeye network monitoring</p>
+                </div>
+
+                <div class="admin">
+
+                    <div class="avatar">
+                        A
+                    </div>
+
+                    <div>
+                        <strong>Administrator</strong>
+                        <small>Local Server</small>
+                    </div>
+
+                </div>
+
+            </header>
+
+
+            <!-- STAT CARDS -->
+
+            <section class="stats">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">
+                        👥
+                    </div>
+
+                    <div>
+                        <span>ACTIVE TOURISTS</span>
+                        <strong id="tourist-count">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">
+                        📡
+                    </div>
+
+                    <div>
+                        <span>ONLINE NODES</span>
+                        <strong id="node-count">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon red">
+                        🚨
+                    </div>
+
+                    <div>
+                        <span>ACTIVE SOS</span>
+                        <strong id="sos-count">0</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-icon purple">
+                        📍
+                    </div>
+
+                    <div>
+                        <span>LOCATIONS</span>
+                        <strong id="location-count">0</strong>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- CONTENT -->
+
+            <section class="content-grid">
+
+
+                <!-- MAP -->
+
+                <div class="panel map-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h3>Live Network Map</h3>
+                            <p>Tourist and node locations</p>
+                        </div>
+
+                        <div class="live-indicator">
+                            <span></span>
+                            LIVE
+                        </div>
+
+                    </div>
+
+                    <div id="map">
+
+                    </div>
+
+                </div>
+
+
+                <!-- NETWORK -->
+
+                <div class="panel">
+
+                    <div class="panel-header">
+
+                        <div>
+                            <h3>Network Nodes</h3>
+                            <p>Hawkeye infrastructure</p>
+                        </div>
+
+                    </div>
+
+                    <div id="nodes-list" class="node-list">
+
+                        <div class="empty">
+                            No nodes registered
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ACTIVITY -->
+
+            <section class="panel activity-panel">
+
+                <div class="panel-header">
+
+                    <div>
+                        <h3>Recent Activity</h3>
+                        <p>Latest events received by the server</p>
+                    </div>
+
+                </div>
+
+                <div id="activity">
+
+                    <div class="empty">
+                        No activity yet
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>
